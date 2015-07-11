@@ -19,12 +19,14 @@
         $emailid = $_POST['emailid'];  
         $password = $_POST['password']; 
 		$ngo = $_POST['ngo_name'];
-		$city = $_POST['city_name']; 		
+		$city = $_POST['city_name']; 
+		$country = $_POST['country'];
+		$state = $_POST['state']; 
         $confirmPassword = $_POST['confirm_password'];  
         if($password == $confirmPassword){  
             $email = $funObj->isUserExist($emailid);  
             if(!$email){  
-                $register = $funObj->UserRegister($username, $emailid, $password, $ngo, $city);  
+                $register = $funObj->UserRegister($username, $emailid, $password, $ngo, $city, $country, $state);  
                 if($register){ 
 				
 				echo "<script>alert('Registration Successful')</script>";  
@@ -101,6 +103,14 @@
 								<p>   
                                     <label  class="youpasswd" data-icon="p">NGO Name</label>  
                                     <input id="passwordsignup_confirm" name="ngo_name" required="required"  placeholder="eg.Happy hearts"/>  
+                                </p> 
+								<p>   
+                                    <label  class="youpasswd" data-icon="p">Country</label>  
+                                    <input id="passwordsignup_confirm" name="country" required="required"  placeholder="eg.India"/>  
+                                </p> 
+								<p>   
+                                    <label  class="youpasswd" data-icon="p">State</label>  
+                                    <input id="passwordsignup_confirm" name="state" required="required"  placeholder="eg.xyz"/>  
                                 </p> 
 								<p>   
                                     <label  class="youpasswd" data-icon="p">City Name</label>  
