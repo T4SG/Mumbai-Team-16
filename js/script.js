@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // <![CDATA[
 $(function() {
 
@@ -18,3 +19,11 @@ Cufon.replace('h1, h2, h3, h4, h5, h6, .content .mainbar a.com, .content .mainba
 //Cufon.replace('h1 small', { color: '#8a98a5'});
 
 // ]]>
+=======
+$(document).ready(function() {		
+		// tool tip
+	$('.normaltip').aToolTip({
+    	toolTipClass: 'aToolTip'});
+
+})
+>>>>>>> 3aa18ec4f3cddbe08a4923aac21081479e33bc0b

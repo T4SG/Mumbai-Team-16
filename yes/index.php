@@ -6,6 +6,7 @@
         $emailid = $_POST['emailid'];  
         $password = $_POST['password'];  
         $user = $funObj->Login($emailid, $password);  
+<<<<<<< HEAD
         if ($user) {
             if($emailid == "admin@gmail.com" && $password == "admin")
             {
@@ -15,6 +16,11 @@
 
             // Registration Success  
            header("location:login.php");  
+=======
+        if ($user) {  
+            // Registration Success  
+           header("location:cart/index.php");  
+>>>>>>> 3aa18ec4f3cddbe08a4923aac21081479e33bc0b
         } else {  
             // Registration Failed  
             echo "<script>alert('Emailid / Password Not Match')</script>";  
